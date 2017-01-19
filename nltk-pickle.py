@@ -38,6 +38,7 @@ classifier = nltk.NaiveBayesClassifier.train(training_set)
 pickle.dump(classifier,save_classifier)
 save_classifier.close()'''
 
+###Running this after saving the classifier as object.Close the stored picle file
 classifier_f = open("naivebayes.pickle", "rb")
 classifier = pickle.load(classifier_f)
 classifier_f.close()
