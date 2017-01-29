@@ -53,7 +53,7 @@ for p in short_pos.split('\n'):
     documents.append( (p, "pos") )
     words = word_tokenize(p)
     pos = nltk.pos_tag(words)
-    for w in pos:
+    for w in pos:git
         if w[1][0] in allowed_word_types:
             all_words.append(w[0].lower())
 
@@ -109,7 +109,7 @@ classifier = nltk.NaiveBayesClassifier.train(training_set)
 print("Original Naive Bayes Algo accuracy percent:", (nltk.classify.accuracy(classifier, testing_set))*100)
 classifier.show_most_informative_features(15)
 
-###############
+
 save_classifier = open("originalnaivebayes5k.pickle","wb")
 pickle.dump(classifier, save_classifier)
 save_classifier.close()
